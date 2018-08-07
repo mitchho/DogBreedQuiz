@@ -1,0 +1,365 @@
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	 color: rgb(192,192,192);
+}
+
+body {
+	background-image: url(../images/pattern4.png); 
+	background-repeat: repeat;	 
+}
+ 
+.container {
+
+	padding: 0 60px;
+	margin-top: 39px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	max-width: 960px;
+	width: 450px;
+	height: 540px;
+	text-align: center;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+    border: none;
+}
+
+.frontDiv, .backDiv {
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	border-radius: 10px;
+  	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 1.2s;
+    transition: transform 1.2s;
+}
+
+.backDiv {
+
+	-webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.container.flipEffect.flipped .frontDiv {
+    -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.container.flipEffect.flipped .backDiv {
+
+	-webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.jsStart {
+	text-align: center;
+}
+
+.jsStartQuizHeader {
+	font-size: 42px;
+	margin-top: 24%;
+}
+
+.jsStartP {
+	font-size: 36px;
+	margin-top: 9%;
+	color: rgb(238,235,220);
+}
+
+.jsStartQuizButton {
+	height: 60px; 
+	width: 90px; 
+	border-radius: 10px; 
+	text-align: center; 
+	margin-top: 9%;
+	font-size: 120%; 
+}
+
+.jsQueston {
+	background-color: rgb(192,192,192);
+}
+
+.jsQuestionPic {
+	border-radius: 10px;
+    border: 3px solid gray;
+    height: 300px; 
+	width: 300px; 	 	
+}
+
+.jsQuestionTextHeader {
+	background-color: rgb(0,100,0);
+ 	width: 100%;
+ 	margin-top: 2%;
+ 	margin-bottom: 2%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border-radius: 10px;
+    font-size: 110%;
+    display: inline-block;
+}
+
+.jsQuestionCount {
+	color: rgb(192,192,192);
+}
+
+.jsQuestionScore {
+ 	color: rgb(238,235,220);
+}
+
+.jsQuestionText {
+ 	color: rgb(192,192,192);
+ 	background-color: rgb(0,100,0);
+ 	width: auto;
+}
+
+.jsAnswerList {
+ 	background-color: rgb(0,100,0);
+ 	width: 60%;
+ 	border-radius: 10px;
+ 	display: inline-block;
+}
+
+.jsLegend {
+	font-size: 21px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%; 
+	margin-bottom: 3%;
+	text-shadow: 2px 2px 2px rgba(200, 200, 200, 1.0);
+}
+
+.jsChoices {
+	font-size: 19px;
+	margin: auto; 
+	width: 150px;
+}
+
+.jsAnswerRadioButton {
+	margin: 1px; 
+	float: left;
+}
+
+.jsSubmitButton {
+	display: inline-block;
+	height: 30px; 
+	width: 60px; 
+	border-radius: 10px; 
+	text-align: center; 
+	position: absolute; 
+	left: 33%; 
+	margin-top: 3.6%;
+}
+
+.jsRestartGameButton {
+	height: 30px; 
+	width: 60px; 
+	border-radius: 10px; 
+	text-align: center; 
+	position: absolute; 
+	left: 54%; 
+	margin-top: 3.6%; 
+	line-height: 9px; 
+	padding: 1px;
+}
+
+.jsAnswerLabel {
+	color: rgb(238,235,220);
+}
+
+.jsFeedbackContainer {
+	background-image: url(../images/pattern2.png); 
+	background-repeat: repeat; 
+	width: 100%;
+	height: 100%; 
+	border-radius: 12px;
+}
+
+.jsFeedbackHeader {
+	text-align: center;
+	position: absolute; 
+	top: 3.6%; 
+	color: rgb(192,192,192);
+	width: 100%;
+}
+
+.jsBreedAnswer {
+	display: table;
+	height: 33%; 
+	width: 100%;  
+	position: absolute; 
+	top: 9%;
+	table-layout:fixed;
+	white-space: pre-wrap; 
+	word-wrap:break-word;
+}
+
+.jsAnswerPic {	 
+	display: table-cell;
+	border-radius: 10px;
+    border: 3px solid gray;
+    height: 100%;  
+	width: 175px;  
+	position: absolute;
+	top: 0%; 
+	left: 6%;
+}
+
+.jsCorrectBreedText {	
+    display: table-cell;   
+	vertical-align: middle; 
+	text-align: center; 
+    word-wrap: break-word;  
+	height: 100%; 
+	width: 54%;
+	position: absolute;
+	top: 18%;
+	left: 45%;
+	border: 20px solid transparent;
+	font: 400 39px/1.0 'Average', Times, serif; 
+	color: rgb(19,30,122); 
+	text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);		
+} 
+
+.jsBreedDescription {
+ 	position: absolute; 
+ 	display: block;
+ 	align-items: center;
+ 	width: 80%;
+	top: 45%; 
+	bottom: 15%;
+	left: 10%; 
+	text-align: center;
+	background-color: rgb(0,0,139);
+	border-radius: 10px;
+}
+
+.jsDispositionLabel { 
+	display: inline-block; 
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	color: rgb(150,150,150);
+	font-size: 120%;
+}
+
+.jsBreedDispositionText { 
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-top: 0.6%;
+	width: 100%; 
+	text-align: center; 
+	color: rgb(192,192,192);
+}
+
+.jsBreedSizeLabel {
+	display: inline-block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: 3%;
+	text-align: center;  
+	color: rgb(150,150,150);
+	font-size: 120%;
+
+}
+
+.jsBreedSizeText { 
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3%;
+	padding-right: 3%; 
+	margin-top: 0.6%;
+	text-align: center; 
+	color: rgb(192,192,192);
+}
+
+.jsBreedHealthLabel {
+	display: inline-block;
+	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: 3%;
+	text-align: center;  
+	color: rgb(150,150,150);
+	font-size: 120%;
+}
+
+.jsBreedHealthText {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3%;
+	padding-right: 3%; 
+	margin-top: 0.6%;
+	color: rgb(192,192,192);
+}
+
+.jsNextButton {
+	height: 30px; 
+	width: 60px; 
+	border-radius: 10px; 
+	text-align: center; 
+	position: absolute; 
+	left: 43%; 
+	bottom: 4.5%;
+}
+ 
+.jsFinalFeedbackHeader {
+ 	margin: auto; 
+ 	color: rgb(192,192,192);
+ 	font-size: 42px;
+ 	margin-top: 33%;
+ 	margin-bottom: 6%;
+}
+
+.jsResultsText {
+	margin: auto; 
+	color: rgb(238,235,220);
+	font-size: 36px;
+}
+
+.jsPlayAgainButton {
+	height: 60px; 
+	width: 90px; 
+	border-radius: 10px; 
+	text-align: center; 
+	margin-top: 11%;
+	margin-right: 2.7%;
+	font-size: 120%;
+}
+
+@media screen and (max-width: 500px) {
+
+	.container {
+		width: 320px;			 	 
+	}
+
+	.jsSubmitButton {
+		left: 28%; 
+	}
+
+	.jsAnswerPic {	   
+		width: 145px; 
+		left: 1%; 	  
+	}
+
+	.jsCorrectBreedText {
+		width: 60%;
+		top: 21%;
+		left: 42%;
+		font: 300 30px/1.0 'Average', Times, serif; 
+	}	 	
+}
+
+ 

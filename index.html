@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dog Breed Knowledge Quiz</title>
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/reset.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Average|Courgette' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/> 
+	</head>
+
+	<body>
+		<main class="container flipEffect" role="main">
+      <div class = "frontDiv" id = "frontElement">     
+      </div>
+      <div class = "backDiv" id = "backElement">
+      </div>
+    </main>  
+ 		
+    <div style="display:none;">
+     	<section id="jsStart">
+      	<header class="jsStartQuizHeader" role="banner">Dog Breed Quiz</header>
+      	<p class="jsStartP">This app tests your ability to guess the correct breed of a dog from a photo of it.</p>
+        <button class = "jsStartQuizButton" type="submit">Start</button>
+    	</section>  <!-- end jsStart section -->
+
+      <section class="jsQuestion">
+        <img class="jsQuestionPic" id='questionDogImage'/> 
+        <h3 class="jsQuestionTextHeader">
+          <label class="jsQuestionCount"></label>
+          <label class="jsQuestionScore"></label>
+          <p class="jsQuestionText"></p>
+        </h3>
+        <form name="answerList" class = "jsAnswerList">
+          <fieldset>
+            <legend class="jsLegend">Choose a breed:</legend>
+            <ol type="A" class="jsChoices"></ol>
+          </fieldset> 
+          <button type="submit" class="jsSubmitButton">Submit</button> 
+          <button class="jsRestartGameButton">Start Over</button>
+        </form>
+      </section>  <!-- end jsQuestion section -->
+          
+      <section id="jsChoice">
+        <li>
+          <input type="radio" class="jsAnswerRadioButton" id = "radioButton" name="user-answer" required>
+          <label class = "jsAnswerLabel"></label>
+        </li>
+      </section> <!-- end jsChoice section -->
+
+      <section id="jsAnswerFeedback">
+        <div class="jsFeedbackContainer"> 
+          <h1 class="jsFeedbackHeader"></h1> 
+          <div class="jsBreedAnswer">
+            <img class="jsAnswerPic" id='answerDogImage'/>
+            <label class='jsCorrectBreedText'> </label>
+          </div> 
+          <div class="jsBreedDescription"> 
+            <label class='jsDispositionLabel'>Disposition:</label>
+            <p class="jsBreedDispositionText"></p> 
+            <label class='jsBreedSizeLabel'>Size:</label>
+            <p class="jsBreedSizeText"></p>
+            <label class="jsBreedHealthLabel">Health:</label>
+            <p class='jsBreedHealthText'></p>
+          </div> 
+          <button class="jsNextButton">Next</button>
+        </div>  <!-- end jsFeedbackContainer div -->
+      </section>  <!-- end jsAnswerFeedback section --> 
+
+      <section class="jsFinalFeedback">
+        <h1 class="jsFinalFeedbackHeader">Results:</h1>
+        <p class="jsResultsText"></p>
+        <button class="jsPlayAgainButton">Play Again</button>
+      </section>  <!-- end jsFinalFeedback section -->
+
+    </div>  <!-- end display: none div -->
+
+
+	   <!-- JavaScript -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
